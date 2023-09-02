@@ -1,0 +1,309 @@
+﻿/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .navigation-menu .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .navigation-menu .logo {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .navigation-menu .menu-toggle {
+        display: none;
+        cursor: pointer;
+    }
+
+        .navigation-menu .menu-toggle i {
+            font-size: 24px;
+        }
+
+    .navigation-menu .menu {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+        .navigation-menu .menu li {
+            margin: 0;
+        }
+
+        .navigation-menu .menu a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+            .navigation-menu .menu a:hover {
+                color: #ff6600;
+            }
+
+/* Style for the Resume Download Button */
+.resume-button {
+    display: flex;
+    top: 30%; /* Adjust the top distance as needed */
+    right: 5%; /* Adjust the right distance as needed */
+}
+
+    .resume-button a {
+        background-color: #3498db; /* Use your primary color */
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+        .resume-button a:hover {
+            background-color: #2980b9; /* Change color on hover */
+        }
+
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.name {
+    display: inline-block;
+    font-size: 40px; /* Adjust the font size as needed */
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0; /* Start with letters hidden */
+    animation-duration: 2s; /* Set the animation duration */
+    animation-fill-mode: both;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.name {
+    display: inline-block;
+    font-size: 36px; /* Adjust the font size as needed */
+    padding-top: 5%;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0; /* Start with letters hidden */
+    animation-duration: 1s; /* Set the animation duration */
+    animation-fill-mode: both;
+    transform: translateX(100%); /* Move letters outside the container from the right */
+}
+
+
+
+/* Apply the animations to individual letters */
+.letter:nth-child(6) {
+    animation-name: flyInFromLeft;
+}
+.letter:nth-child(8) {
+    animation-name: flyInFromRight;
+}
+.letter:nth-child(5) {
+    animation-name: flyInFromLeft;
+    animation-delay: 0.5s; /* Delay the animation */
+}
+
+.letter:nth-child(9) {
+    animation-name: flyInFromRight;
+    animation-delay: 0.5s; /* Delay the animation */
+}
+.letter:nth-child(4) {
+    animation-name: flyInFromLeft;
+    animation-delay: 1s; /* Delay the animation */
+}
+
+.letter:nth-child(10) {
+    animation-name: flyInFromRight;
+    animation-delay: 1s; /* Delay the animation */
+}
+.letter:nth-child(3) {
+    animation-name: flyInFromLeft;
+    animation-delay: 1.5s; /* Delay the animation */
+}
+
+.letter:nth-child(11) {
+    animation-name: flyInFromRight;
+    animation-delay: 1.5s; /* Delay the animation */
+}
+
+.letter:nth-child(2) {
+    animation-name: flyInFromLeft;
+    animation-delay: 2s; /* Delay the animation */
+}
+
+.letter:nth-child(12) {
+    animation-name: flyInFromRight;
+    animation-delay: 2s; /* Delay the animation */
+}
+
+
+
+/* Apply the animation to letters with the grow-and-color class */
+.grow-and-color {
+    animation-name: growAndColor;
+    animation-duration: 2s; /* Set the animation duration */
+    animation-fill-mode: both;
+}
+
+/* Apply the animation to letters */
+.letter:nth-child(1) {
+    animation-name: growAndColor;
+    animation-delay: 3s; /* Delay the animation */
+}
+
+/* Section Styles */
+.section {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+    .section h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 2%;
+        padding-bottom: 1%;
+        padding-right: 1%;
+    }
+
+/* Alternate Section Styles */
+.alternate {
+    flex-direction: row-reverse;
+}
+
+/* Left Column Styles */
+.left-column {
+    flex: 1;
+    display: flex; /* Make the left column a flex container */
+    text-align: left; /* Align the content to the left */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+    .left-column img {
+        max-width: 33%; /* Set the image width to one-third of the container width */
+        height: auto;
+        padding: 2%;
+    }
+
+    .left-column .content {
+        flex: 2; /* Take up 2/3 of the left column width for content */
+        padding-left: 5%; /* Add some spacing between image and content */
+        padding-right: 5%;
+        background-color: white;
+        padding-bottom: 2%;
+    }
+
+    .left-column h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 2%;
+    }
+
+
+/* Right Column Styles */
+.right-column {
+    flex: 1;
+    display: flex; /* Make the right column a flex container */
+    padding-left: 5%;
+    text-align: left; /* Align the content to the left */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+    .right-column .content {
+        flex: 2; /* Take up 2/3 of the right column width for content */
+        padding-left: 5%;
+        padding-right: 5%; /* Add some spacing between content and image */
+        background-color: white;
+        padding-bottom: 2%;
+    }
+
+    .right-column img {
+        max-width: 33%; /* Set the image width to one-third of the container width */
+        height: auto;
+        padding: 2%;
+    }
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navigation-menu .menu {
+        display: none;
+    }
+
+    .navigation-menu .menu-toggle {
+        display: block;
+    }
+
+    .navigation-menu.show .menu {
+        display: flex;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .left-column, .right-column {
+        padding: 20px;
+    }
+
+    .resume-button {
+        display: none; /* Hide the button on smaller screens */
+    }
+}
